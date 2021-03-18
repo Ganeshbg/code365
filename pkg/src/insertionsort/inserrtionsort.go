@@ -1,10 +1,6 @@
-package main
+package insertionsort
 
-import (
-	"fmt"
-)
-
-func insertionSort(list []int) []int{
+func InsertionSort(list []int) []int{
 	for i := 1; i< len(list); i++ {
 		j := i-1
 		temp := list[i]
@@ -15,9 +11,4 @@ func insertionSort(list []int) []int{
 		list[j+1] = temp
 	}
 	return list
-}
-
-func main() {
-	list := []int{4,5,2,7,8,33,57,3,2,8,98}
-	fmt.Println(insertionSort(list))
 }
